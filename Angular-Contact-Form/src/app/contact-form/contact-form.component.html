@@ -1,0 +1,14 @@
+<!-- <form action="Link to/send_mail.php" method="post">
+    <input type="text" name="name">
+    <input type="text" name="message"> 
+    <button>Senden</button>
+</form>> -->
+
+<!-- both variables "name" and "message" are found as variables in send_mail.php line 18 and 19 -->
+
+<!-- alternatively realized via : -->
+<form (submit)="sendMail()" ngNativeValidate #myForm>  <!-- access form via ViewChild named myForm-->
+    <input required type="text" name="name" #nameField>
+    <textarea required  type="text" name="message" #messageField></textarea> 
+    <button #sendButton>Senden</button>
+</form>
